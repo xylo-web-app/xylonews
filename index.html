@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XyloMessage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #2d89ef;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .message-box {
+      background: white;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .message-title {
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-bottom: 1px solid #eee;
+    }
+
+    .message-content {
+      padding: 1rem;
+      display: none;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .message-box.open .message-content {
+      display: block;
+    }
+
+    .message-box:hover {
+      transform: scale(1.01);
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>XyloMessage</header>
+
+  <div class="container">
+    <div class="message-box">
+      <div class="message-title">📢 School Reopens on Monday</div>
+      <div class="message-content">
+        Please note that the school will reopen on Monday, August 5th. All students must report by 8:00 AM. New rules will be discussed in the morning assembly.
+      </div>
+    </div>
+
+    <div class="message-box">
+      <div class="message-title">🎉 Independence Day Celebration</div>
+      <div class="message-content">
+        Our school will celebrate Independence Day on August 15 with cultural events, speeches, and flag hoisting. All students are encouraged to participate.
+      </div>
+    </div>
+
+    <div class="message-box">
+      <div class="message-title">📝 Exam Timetable Released</div>
+      <div class="message-content">
+        The term exam timetable has been uploaded to the notice board. Please check your subjects and dates carefully and prepare accordingly.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.message-box').forEach(box => {
+      box.addEventListener('click', () => {
+        box.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

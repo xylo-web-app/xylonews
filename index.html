@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XyloNews</title>
+  <title>XyloMessage</title>
   <style>
     body {
       margin: 0;
@@ -15,7 +15,7 @@
     header {
       background-color: #2d89ef;
       color: white;
-      padding: 1.5rem;
+      padding: 1.5rem 1rem;
       text-align: center;
       font-size: 2rem;
       font-weight: bold;
@@ -29,18 +29,19 @@
     }
 
     .message-box {
+      width: 100%;
       background: white;
       border-radius: 10px;
       margin-bottom: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       cursor: pointer;
       overflow: hidden;
-      transition: all 0.3s ease;
+      transition: transform 0.2s ease;
     }
 
     .message-title {
       padding: 1rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       border-bottom: 1px solid #eee;
     }
@@ -48,7 +49,7 @@
     .message-content {
       padding: 1rem;
       display: none;
-      font-size: 1rem;
+      font-size: 0.95rem;
       line-height: 1.6;
     }
 
@@ -58,39 +59,52 @@
 
     .message-box:hover {
       transform: scale(1.01);
-      background-color: #fafafa;
+      background-color: #f9f9f9;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header {
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+
+      .message-title {
+        font-size: 1rem;
+      }
+
+      .message-content {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>XyloNews - News channel for our school!</header>
+  <header>XyloMessage</header>
 
   <div class="container">
     <div class="message-box">
-      <div class="message-title">📢 Excluisve launch of XyloNews!</div>
+      <div class="message-title">📢 School Reopens on Monday</div>
       <div class="message-content">
-        Hi guys, I am Hillol, the creator of XyloNews. Here we share news of our school. If you want to add news, contact with me in school or email me on xylotechlabs@gmail.com
+        Please note that the school will reopen on Monday, August 5th. All students must report by 8:00 AM. New rules will be discussed in the morning assembly.
       </div>
     </div>
 
-  <div class="container">
     <div class="message-box">
-      <div class="message-title">✨ Xylo Tech Labs</div>
+      <div class="message-title">🎉 Independence Day Celebration</div>
       <div class="message-content">
-        Xylo Tech Labs - A youtube channel focused on tech made by Hillol. Subscribe now!
+        Our school will celebrate Independence Day on August 15 with cultural events, speeches, and flag hoisting. All students are encouraged to participate.
+      </div>
     </div>
-   </div>
 
-  <div class="container">
     <div class="message-box">
       <div class="message-title">📝 Exam Timetable Released</div>
       <div class="message-content">
-        The half-yearly exam timetable has been uploaded to school groups. Please check your subjects and dates carefully and prepare accordingly.
+        The term exam timetable has been uploaded to the notice board. Please check your subjects and dates carefully and prepare accordingly.
       </div>
     </div>
-  </div> 
-</div>
+  </div>
 
   <script>
     document.querySelectorAll('.message-box').forEach(box => {
